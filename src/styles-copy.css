@@ -2,12 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
-  height: 100%;
+html,
+body,
+#root {
+  min-height: 100%;
   margin: 0;
-  overflow-y: hidden;
+}
+
+html,
+body {
+  background-color: rgb(15, 23, 42);
+}
+
+body {
+  overflow-x: hidden;
+  color: #fff;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+@media (min-width: 1024px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow-y: hidden;
+  }
 }
 
 .background {
-  @apply  bg-slate-900 text-white ;
+  @apply bg-slate-900 text-white;
 }

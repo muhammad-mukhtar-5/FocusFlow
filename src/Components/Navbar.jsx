@@ -102,7 +102,7 @@ export default function Navbar() {
 
       <nav
         className={[
-          "fixed inset-y-0 left-0 z-50 flex w-[min(18rem,85vw)] flex-col border-r border-slate-700 bg-slate-900 text-white shadow-2xl transition-transform duration-300 md:static md:z-auto md:h-dvh md:w-72 md:shrink-0 md:translate-x-0 md:shadow-none",
+          "fixed inset-y-0 left-0 z-50 flex w-[min(18rem,85vw)] flex-col border-r border-slate-700 bg-slate-900 text-white shadow-2xl transition-transform duration-300 md:static md:z-auto md:w-72 md:shrink-0 md:translate-x-0 md:shadow-none lg:h-dvh",
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full",
         ].join(" ")}
       >

@@ -29,7 +29,7 @@ export default function Signup() {
   }
 
   return (
-    <main className="min-h-dvh overflow-y-auto bg-slate-950 px-4 py-6 text-white sm:px-6 lg:px-8">
+    <main className="min-h-dvh bg-slate-950 px-4 py-6 text-white sm:px-6 lg:min-h-full lg:overflow-y-auto lg:px-8">
       <section className="mx-auto grid max-w-5xl overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-2xl lg:grid-cols-[0.95fr,1.05fr]">
         <div className="flex flex-col justify-between gap-8 bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950 p-6 sm:p-8 lg:p-10">
           <div>
