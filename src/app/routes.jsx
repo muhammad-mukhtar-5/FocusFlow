@@ -14,8 +14,7 @@ export default function AppRoutes() {
   const { user } = useContext(AuthContext);  
   return (
     <Routes>
-      <Route
-        path="/layout"
+      <Routes
         element={user ? <Layout /> : <Navigate to="/login" />}   
       />
       <Route path="/" element={<Login />} />
