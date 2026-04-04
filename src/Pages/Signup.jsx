@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { ArrowRight, CheckCircle2, UserPlus } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
+import PasswordField from "../Components/PasswordField";
 
 export default function Signup() {
   const { signup } = useContext(AuthContext);
@@ -87,29 +88,25 @@ export default function Signup() {
                 />
               </label>
 
-              <label className="block">
-                <span className="mb-2 block text-sm text-slate-300">Password</span>
-                <input
-                  type="password"
-                  required
-                  placeholder="Password"
-                  value={password}
-                  onChange={(event) => setPassword(event.target.value)}
-                  className="w-full rounded-2xl border border-slate-700 bg-slate-950/50 px-4 py-3 text-white outline-none transition focus:border-emerald-400"
-                />
-              </label>
+              <PasswordField
+                label="Password"
+                required
+                placeholder="Password"
+                autoComplete="new-password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                focusBorderClass="focus:border-emerald-400"
+              />
 
-              <label className="block">
-                <span className="mb-2 block text-sm text-slate-300">Confirm password</span>
-                <input
-                  type="password"
-                  required
-                  placeholder="Confirm password"
-                  value={confirmPassword}
-                  onChange={(event) => setConfirmPassword(event.target.value)}
-                  className="w-full rounded-2xl border border-slate-700 bg-slate-950/50 px-4 py-3 text-white outline-none transition focus:border-emerald-400"
-                />
-              </label>
+              <PasswordField
+                label="Confirm password"
+                required
+                placeholder="Confirm password"
+                autoComplete="new-password"
+                value={confirmPassword}
+                onChange={(event) => setConfirmPassword(event.target.value)}
+                focusBorderClass="focus:border-emerald-400"
+              />
 
               <button
                 type="submit"

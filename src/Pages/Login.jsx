@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { ArrowRight, CheckCircle2, TimerReset } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
+import PasswordField from "../Components/PasswordField";
 
 export default function Login() {
   const { login } = useContext(AuthContext);
@@ -81,17 +82,15 @@ export default function Login() {
                 />
               </label>
 
-              <label className="block">
-                <span className="mb-2 block text-sm text-slate-300">Password</span>
-                <input
-                  type="password"
-                  required
-                  placeholder="Password"
-                  value={password}
-                  onChange={(event) => setPassword(event.target.value)}
-                  className="w-full rounded-2xl border border-slate-700 bg-slate-950/50 px-4 py-3 text-white outline-none transition focus:border-sky-400"
-                />
-              </label>
+              <PasswordField
+                label="Password"
+                required
+                placeholder="Password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                focusBorderClass="focus:border-sky-400"
+              />
 
               <button
                 type="submit"
